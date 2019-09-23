@@ -1,0 +1,14 @@
+{
+    "name": "first-data-scrapper",
+    "version": "0.0.1",
+    "homepage": "https://github.com/adrinv2/coding_assignment_1",
+    "description": "A data scrapper, first version, first trial",
+    "author": "Adri",
+    "main": "app.js",
+    "dependencies": {
+        "nodemon": "latest",
+        "express": "latest",
+        "request": "latest",
+        "cheerio": "latest"
+    }
+}
