@@ -6,9 +6,11 @@
     "author": "Adri",
     "main": "app.js",
     "dependencies": {
-        "nodemon": "latest",
         "express": "latest",
         "request": "latest",
         "cheerio": "latest"
+    },
+    "devDependencies": {
+        "nodemon": "^1.19.2"
     }
 }
