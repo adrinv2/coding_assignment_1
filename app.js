@@ -71,29 +71,7 @@ app.get('/imdb', function(req, res){
 });
 
 
-app.get('/scotland', function(req, res){
 
-  var url = 'https://twitter.com/74frankfurt';
-
-  request(url, function(error, response, html) {
-    if(!error) {
-      // res.send(html);
-      var $ = cheerio.load(html);
-      var data = [];
-
-      $('.lister-list').filter(function(){
-        $(this).find('tr').each(function(i, elem){
-        data[i] = "'" + $(this). find('.stream').find('img').attr('src') + "'"
-      });
-});
-      res.send(data);
-
-      fs.writeFile('twitter-output.js', 'var twitter_list = [' + data +']', function(error){
-        console.log('File written on hard drive!');
-
-      });
-    }
-  });
 //All the web scraping magic will happen here
 //  res.send('Hello World!');
 
