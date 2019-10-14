@@ -13,7 +13,7 @@ var url = require('url');
 var port = 8081;
 var app = express();
 
-var DOWNLOAD_DIR = '../coding_assignment_1/pics';
+var DOWNLOAD_DIR = '/';
 
 // //STEP 1: Setting up the boilerplate and routing
 // app.get('/wikipedia', function(req, res){
@@ -49,38 +49,9 @@ var DOWNLOAD_DIR = '../coding_assignment_1/pics';
 //
 // });
 
-// app.get('/google', function(req, res){
-//
-//   var url = 'https://www.google.com/search?rlz=1C1CHBD_csCZ736CZ736&biw=865&bih=610&tbm=isch&sxsrf=ACYBGNR3vKf4Pxtg1ZVX-UgUNg05pR2ntA%3A1570977896409&sa=1&ei=aDijXdfYGKyJk74PxbeGgAE&q=el+expolio+el+greco&oq=el+expolio+el+greco&gs_l=img.3...0.0..4919902...0.0..0.0.0.......0......gws-wiz-img.e9ESRPMR1lE&ved=0ahUKEwjXrNzbvJnlAhWsxMQBHcWbARAQ4dUDCAc&uact=5';
-//
-//   request(url, function(error, response, html) {
-//     if(!error) {
-//       // res.send(html);
-//       var $ = cheerio.load(html);
-//       var google_data = [];
-//
-//       $('#isr_mc').filter(function(){
-//         $(this).find('.rg_l').each(function(i, elem){
-//         data[i] = "'" + $(this). find('.rg_l').find('img').attr('src') + "'"
-//       });
-// });
-//       res.send(google_data);
-//
-//       fs.writeFile('google_output.js',"var google_output = [" + google_data + "]", function(error){
-//               console.log("File is written successfully!");
-//
-//       });
-//     }
-//   });
-// //All the web scraping magic will happen here
-// //  res.send('Hello World!');
-//
-// });
-
-
 app.get('/google', function(req, res){
 
-  var url = 'https://www.bing.com/images/search?q=el+expolio+el+greco&form=HDRSC2&first=1&cw=1129&ch=593';
+  var url = 'https://www.google.com/search?rlz=1C1CHBD_csCZ736CZ736&biw=865&bih=610&tbm=isch&sxsrf=ACYBGNR3vKf4Pxtg1ZVX-UgUNg05pR2ntA%3A1570977896409&sa=1&ei=aDijXdfYGKyJk74PxbeGgAE&q=el+expolio+el+greco&oq=el+expolio+el+greco&gs_l=img.3...0.0..4919902...0.0..0.0.0.......0......gws-wiz-img.e9ESRPMR1lE&ved=0ahUKEwjXrNzbvJnlAhWsxMQBHcWbARAQ4dUDCAc&uact=5';
 
   request(url, function(error, response, html) {
     if(!error) {
@@ -88,9 +59,14 @@ app.get('/google', function(req, res){
       var $ = cheerio.load(html);
       var google_data = [];
 
-      $('.imgpt').filter(function(){
-        $(this).find('.img_cont').each(function(i, elem){
-        data[i] = "'" + $(this). find('.img_cont').find('img').attr('src') + "'"
+      // $(this).find("img").each(function(){
+      //   google_data.push($(this).attr('src'));
+      // });
+
+      $('#ires').filter(function(){
+        $(this).find('td').each(function(i, elem){
+        google_data[i] = "'" + $(this).find('img').attr('src') + "'"
+        download_file_curl($(this).find('img').attr('src'));
       });
 });
       res.send(google_data);
@@ -105,6 +81,56 @@ app.get('/google', function(req, res){
 //  res.send('Hello World!');
 
 });
+var download_file_curl = function(file_url) {
+  // extract the file name
+  var file_name = url.parse(file_url).pathname.split('/').pop();
+  // create an instance of writable stream
+  var file = fs.createWriteStream(DOWNLOAD_DIR + file_name);
+  // execute curl using child_process' spawn function
+  var curl = spawn('curl', [file_url]);
+  // add a 'data' event listener for the spawn instance
+  curl.stdout.on('data', function(data) { file.write(data); });
+  // add an 'end' event listener to close the writeable stream
+  curl.stdout.on('end', function(data) {
+    file.end();
+    console.log(file_name + ' downloaded to ' + DOWNLOAD_DIR);
+  });
+  // when the spawn child process exits, check if there were any errors and close the writeable stream
+  curl.on('exit', function(code) {
+    if (code != 0) {
+      console.log('Failed: ' + code);
+    }
+  });
+};
+
+
+// app.get('/google', function(req, res){
+//
+//   var url = 'https://www.bing.com/images/search?q=el+expolio+el+greco&form=HDRSC2&first=1&cw=1129&ch=593';
+//
+//   request(url, function(error, response, html) {
+//     if(!error) {
+//       // res.send(html);
+//       var $ = cheerio.load(html);
+//       var google_data = [];
+//
+//       $('.imgpt').filter(function(){
+//         $(this).find('.img_cont').each(function(i, elem){
+//         data[i] = "'" + $(this). find('.img_cont').find('img').attr('src') + "'"
+//       });
+// });
+//       res.send(google_data);
+//
+//       fs.writeFile('google_output.js',"var google_output = [" + google_data + "]", function(error){
+//               console.log("File is written successfully!");
+//
+//       });
+//     }
+//   });
+// //All the web scraping magic will happen here
+// //  res.send('Hello World!');
+//
+// });
 
 // // INSTAGRAM SCRAPER: access by going to 'localhost:2100/instagram'
 // app.get('/instagram', function(req, res){
