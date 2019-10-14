@@ -6,9 +6,11 @@
     "author": "Adri",
     "main": "app.js",
     "dependencies": {
+        "aos": "^2.3.4",
+        "cheerio": "latest",
         "express": "latest",
-        "request": "latest",
-        "cheerio": "latest"
+        "images-scraper": "^3.0.1",
+        "request": "latest"
     },
     "devDependencies": {
         "nodemon": "^1.19.2"

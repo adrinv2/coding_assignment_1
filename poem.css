@@ -1,0 +1,21 @@
+body {
+
+}
+p {
+  color: black;
+}
+
+/* .ml3 {
+  font-weight: 900;
+  font-size: 3.5em;
+} */
+
+/*Use this class when you want your content to be hidden*/
+.text {
+  font-size: 20px;
+  color: black;
+
+  }
+-webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+
+/*user-select for chrome. do i need it for this?
