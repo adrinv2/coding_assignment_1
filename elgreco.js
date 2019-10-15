@@ -25,29 +25,29 @@
 // slideit()
 // //-->
 
-function generateCat() {
+function generateGreco() {
 
     // this statement creates a new <div>
-    var myCat = $("<div>");
+    var myGreco = $("<div>");
 
     // this statement adds the class cat1 to this div
-    myCat.addClass("cat1");
+    myGreco.addClass("greco1");
 
     // this statement adds the div to the html document (important!)
-    $(".container").append( myCat );
+    $(".container").append( myGreco );
 
     // this statement generates a random value between 0 and 14
     var n = Math.floor( Math.random() * 14);
     // this statement uses the generated value to create a filename
-    var path_to_img = "url(coding_assignment_1/images/greco_" + n + ".jpg)";
+    var path_to_img = "url(../coding_assignment_1/images/greco_" + n + ".jpg)";
     // this statement now uses the generated filename to change the background-image of the new div
-    myCat.css("background-image",path_to_img);
+    myGreco.css("background-image",path_to_img);
 
     var x = Math.random() * $(window).width();
-    myCat.css("left",x);
+    myGreco.css("left",x);
 
     var y = Math.random() * $(window).height();
-    myCat.css("top",y);
+    myGreco.css("top",y);
 }
 
-var t = setInterval( generateCat, 300 );
+var t = setInterval( generateGreco, 200 );

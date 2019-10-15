@@ -13,7 +13,7 @@ var url = require('url');
 var port = 8081;
 var app = express();
 
-var DOWNLOAD_DIR = '/';
+var DOWNLOAD_DIR = 'C:/Users/adria/Documents/GitHub/coding_assignment_1/';
 
 // //STEP 1: Setting up the boilerplate and routing
 // app.get('/wikipedia', function(req, res){
