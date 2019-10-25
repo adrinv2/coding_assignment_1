@@ -13,7 +13,7 @@
 <a class = "start"  href= "../coding_assignment_1/elgreco.html" >
   "El Expolio" by El Greco
 </a>
-
+<div id="rectangle"></div>
 
 
 
@@ -38,9 +38,24 @@
   top: 200px;
   left: 70px;
   position: fixed;
-  text-decoration: none
+  text-decoration: none;
+  animation: blinker 1s linear infinite;
   }
 
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  #rectangle{
+    position: fixed;
+    top: 100px;
+    left: 300px;
+      width:400px;
+      height:250px;
+      background:blue;
+  }
 
 
   </style>
