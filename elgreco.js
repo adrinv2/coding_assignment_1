@@ -51,3 +51,9 @@ function generateGreco() {
 }
 
 var t = setInterval( generateGreco, 200 );
+
+}
+
+$( ".rectangle2" ).click(function() {
+  $( ".rectangle2" ).css('background', 'yellow');
+});
