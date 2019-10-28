@@ -1,0 +1,17 @@
+{
+    "globals": {
+        "$":true
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "rules": {
+        "no-unused-vars": [
+            "error", 
+            { 
+                "argsIgnorePattern": "e" 
+            }
+        ]
+    }
+}

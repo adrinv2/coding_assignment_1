@@ -8,23 +8,37 @@ body {
   left: 20px;
 } */
 
-.start {
-  font-size: 25px;
+.next {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
   font-family: 'Montserrat Subrayada', sans-serif;
-align-content: center;
+  color: white;
 }
 
 .container {
+    top: 30px;
     height: 100%;
     background-color: rgb(108, 167, 103);
+    position: absolute;
 }
 
 .greco1 {
     position: absolute;
-    top: 50%;
+    top: 0;
     left:50%;
     width: 1080px;
+    max-width: 100vh;
     height: 1080px;
+    max-height: 100vh;
+    background-size: 100vh 100vh;
     background: url('../images/greco_1.png');
     background-blend-mode: multiply;
+}
+
+.greco1 img {
+  position: relative;
+  height: 100%;
+  width: auto;
 }
