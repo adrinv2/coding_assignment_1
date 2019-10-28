@@ -48,6 +48,14 @@ left: 431px;
 
 }
 
+.chapters{
+  font-family: 'Jura', sans-serif;
+  position: absolute;
+  top: 1500px;
+  left: 300px;
+  font-size: 30px;
+  color: white;
+}
 
 .whatevershape {
   position: absolute;
