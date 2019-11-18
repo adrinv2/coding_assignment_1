@@ -48,34 +48,121 @@ left: 431px;
 
 }
 
-.chapters{
-  font-family: 'Jura', sans-serif;
-  position: absolute;
-  top: 1500px;
-  left: 300px;
-  font-size: 30px;
-  color: white;
-}
+
 
 .whatevershape {
   position: absolute;
-  top: 1700px;
+  top: 1600px ;
   left: 300px;
   width:130px;
-  height:250px;
+  height:350px;
   background-color: black;
+  overflow:visible;
 
 }
 
 
 .whatevershape2 {
   position: absolute;
-  top: 1700px;
-  left: 460px;
-  width:130px;
-  height:250px;
+  top: 1600px;
+  left: 435px;
+  width:300px;
+  height:100px;
+  background-color: black;
+  overflow:visible;
+
+}
+
+
+.whatevershape3 {
+  position: absolute;
+  top: 1600px;
+  left: 740px;
+  width:150px;
+  height:100px;
+  background-color: black;
+  overflow:visible;
+
+}
+
+.whatevershape4 {
+  position: absolute;
+  top: 1705px;
+  left: 790px;
+  width:100px;
+  height:245px;
   background-color: black;
 
+}
+
+.whatevershape5 {
+  position: absolute;
+  top: 1705px;
+  left: 625px;
+  width:160px;
+  height:150px;
+  background-color: black;
+  overflow:visible;
+
+}
+
+.whatevershape6 {
+  position: absolute;
+  top: 1705px;
+  left: 435px;
+  width:185px;
+  height:120px;
+  background-color: black;
+  overflow:visible;
+
+}
+
+
+.whatevershape7 {
+  position: absolute;
+  top: 1830px;
+  left: 435px;
+  width:185px;
+  height:120px;
+  background-color: black;
+  overflow:visible;
+
+}
+
+.whatevershape8 {
+  position: absolute;
+  top: 1860px;
+  left: 625px;
+  width:160px;
+  height:90px;
+  background-color: black;
+  overflow:visible;
+  }
+
+.artmap {
+position: absolute;
+  left: 190px;
+    top: 5px;
+}
+
+.chapters{
+  font-family: 'Jura', sans-serif;
+  position: absolute;
+  top: 1500px;
+  left: 355px;
+  font-size: 30px;
+  color: white;
+}
+
+.textinfo {
+  font-family: 'Jura', sans-serif;
+  position: absolute;
+  top: 1600px;
+  left: 100px;
+  font-size: 18px;
+  width: 370px;
+  color: white;
+    /* background-color: red; */
 }
 
 .start {

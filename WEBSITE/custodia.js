@@ -12,10 +12,10 @@ function generateGreco() {
     $(".container").append( myGreco );
 
     // this statement generates a random value between 0 and 14
-    var n = Math.floor( Math.random() * 14);
-    myImage.attr('src', "../website/images/custodia/custodia_" + n + ".jpg");
+    var n = Math.floor( Math.random() * 77);
+    myImage.attr('src', "../website/images/custodia/custodia (" + n + ").jpg");
     // this statement uses the generated value to create a filename
-    var path_to_img = "url(../website/images/custodia/custodia_" + n + ".jpg)";
+    var path_to_img = "url(../website/images/custodia/custodia (" + n + ").jpg";
     // this statement now uses the generated filename to change the background-image of the new div
     // myGreco.css("background-image",path_to_img);
 

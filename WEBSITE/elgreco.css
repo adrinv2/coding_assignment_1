@@ -29,9 +29,9 @@ body {
     top: 0;
     left:50%;
     width: 1080px;
-    max-width: 100vh;
+    max-width: 50vh;
     height: 1080px;
-    max-height: 100vh;
+    max-height: 50vh;
     background-size: 100vh 100vh;
     background: url('../images/greco_1.png');
     background-blend-mode: multiply;
