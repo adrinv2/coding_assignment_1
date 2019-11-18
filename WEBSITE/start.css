@@ -48,25 +48,44 @@ left: 431px;
 
 }
 
+.textinfo {
+  font-family: 'Jura', sans-serif;
+  position: absolute;
+  top:400px;
+  left: 310px;
+  font-size: 18px;
+  width: 500px;
+  color: white;
+    /* background-color: red; */
+}
 
+.chapters{
+  font-family: 'Jura', sans-serif;
+  position: absolute;
+  top: 1420px;
+  left: 30px;
+  font-size: 42px;
+  color: white;
+}
 
 .whatevershape {
   position: absolute;
-  top: 1600px ;
-  left: 300px;
-  width:130px;
-  height:350px;
+  top: 1500px ;
+  left: 0px;
+  width:205px;
+  height:500px;
   background-color: black;
   overflow:visible;
+
 
 }
 
 
 .whatevershape2 {
   position: absolute;
-  top: 1600px;
-  left: 435px;
-  width:300px;
+  top: 1500px;
+  left: 210px;
+  width:430px;
   height:100px;
   background-color: black;
   overflow:visible;
@@ -74,11 +93,11 @@ left: 431px;
 }
 
 
-.whatevershape3 {
+ .whatevershape3 {
   position: absolute;
-  top: 1600px;
-  left: 740px;
-  width:150px;
+  top: 1500px;
+  left: 645px;
+  width:175px;
   height:100px;
   background-color: black;
   overflow:visible;
@@ -87,20 +106,20 @@ left: 431px;
 
 .whatevershape4 {
   position: absolute;
-  top: 1705px;
-  left: 790px;
-  width:100px;
-  height:245px;
+  top: 1605px;
+  left: 645px;
+  width:175px;
+  height:290px;
   background-color: black;
 
 }
 
 .whatevershape5 {
   position: absolute;
-  top: 1705px;
-  left: 625px;
-  width:160px;
-  height:150px;
+  top: 1605px;
+  left: 210px;
+  width:240px;
+  height:125px;
   background-color: black;
   overflow:visible;
 
@@ -108,10 +127,10 @@ left: 431px;
 
 .whatevershape6 {
   position: absolute;
-  top: 1705px;
-  left: 435px;
+  top: 1605px;
+  left: 455px;
   width:185px;
-  height:120px;
+  height:250px;
   background-color: black;
   overflow:visible;
 
@@ -120,11 +139,11 @@ left: 431px;
 
 .whatevershape7 {
   position: absolute;
-  top: 1830px;
-  left: 435px;
-  width:185px;
-  height:120px;
-  background-color: black;
+  top: 1735px;
+  left: 210px;
+  width:240px;
+  height:265px;
+  background-color:black;
   overflow:visible;
 
 }
@@ -132,41 +151,45 @@ left: 431px;
 .whatevershape8 {
   position: absolute;
   top: 1860px;
-  left: 625px;
-  width:160px;
-  height:90px;
+  left: 455px;
+  width:185px;
+  height:140px;
   background-color: black;
   overflow:visible;
   }
 
+  .whatevershape9 {
+    position: absolute;
+    top: 1900px;
+    left: 645px;
+    width:335px;
+    height:100px;
+    background-color: black;
+    overflow:visible;
+    }
+
+    .whatevershape10 {
+      position: absolute;
+      top: 1500px;
+      left: 825px;
+      width:155px;
+      height:395px;
+      background-color: black;
+      overflow:visible;
+      }
+
+
 .artmap {
 position: absolute;
-  left: 190px;
-    top: 5px;
-}
+  left: 160px;
+    top: -10px;
+  }
 
-.chapters{
-  font-family: 'Jura', sans-serif;
-  position: absolute;
-  top: 1500px;
-  left: 355px;
-  font-size: 30px;
-  color: white;
-}
 
-.textinfo {
-  font-family: 'Jura', sans-serif;
-  position: absolute;
-  top: 1600px;
-  left: 100px;
-  font-size: 18px;
-  width: 370px;
-  color: white;
-    /* background-color: red; */
-}
+
 
 .start {
-  font-size: 25px;
+  font-size: 20px;
   /* font-family: 'Montserrat Subrayada', sans-serif; */
   /* font-family: 'Modak', cursive; */
 align-content: center;
