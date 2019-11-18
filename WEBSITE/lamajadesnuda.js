@@ -12,7 +12,7 @@ function generateGreco() {
     $(".container").append( myGreco );
 
     // this statement generates a random value between 0 and 14
-    var n = Math.floor( Math.random() * 77);
+    var n = Math.floor( Math.random() * 40);
     myImage.attr('src', "../website/images/lamajadesnuda/lamajadesnuda (" + n + ").jpg");
     // this statement uses the generated value to create a filename
     var path_to_img = "url(../website/images/lamajadesnuda/lamajadesnuda (" + n + ").jpg";
