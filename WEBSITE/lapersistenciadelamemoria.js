@@ -27,3 +27,15 @@ function generateGreco() {
 }
 
 var t = setInterval( generateGreco, 200 );
+
+$(document).ready(function() {
+  $('body').on('mousemove', function(e) {
+    var leftOffset = $(this).offset().left;
+    var topOffset = $(this).offset().top;
+
+    $('.container').css('left', -e.clientX + leftOffset);
+    $('.container').css('top', -e.clientY + topOffset);
+
+    // console.log($(this).outerWidth() + ' - ' + $(this)[0].scrollWidth);
+  });
+});

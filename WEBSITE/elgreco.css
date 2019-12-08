@@ -1,5 +1,6 @@
 body {
     background-color: rgb(0, 0, 0);
+    overflow: hidden;
 }
 
 /* .uno {
@@ -15,6 +16,7 @@ body {
   font-size: 20px;
   font-family: 'Montserrat Subrayada', sans-serif;
   color: white;
+  z-index: 99999;
 }
 
 .container {
