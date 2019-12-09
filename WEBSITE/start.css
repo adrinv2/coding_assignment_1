@@ -9,15 +9,28 @@ body {
     display: none;
 }
 
-
+/*
 .ticketname{
   font-family: 'Jura', sans-serif;
   color: black;
   font-size: 10pt;
-}
-
+} */
+/*
 #rectangle{
-  position: relative;
+position: relative;
+top:50px;
+left: 300px;
+width: 600px;
+height: 350px;
+background-color: red;
+
+} */
+
+
+
+
+
+  /* position: relative;
   top: 100px;
   left: 300px;
     width:430px;
@@ -33,29 +46,44 @@ left:0px;
 width:430px;
 height:2px;
 background:black;
-}
+}*/
 
 .container{
   position: relative;
-top: -17.5px;
-left: 431px;
-  width:100px;
-  height:250px;
-  background-color:rgb(114, 182, 46);
-  /* border: 2px solid white; */
-  border: 2px white;
-  border-style:  solid solid solid dashed;
+  top:10px;
+  left: 240px;
+  width: 900px;
+  height: 400px;
+
+  background-image: url("../website/images/ticket.png");
+background-size: 100%;
+background-repeat: no-repeat;
+background-position: center;
 
 }
+
+/* .other{
+position: relative;
+top:50px;
+left: 300px;
+width: 700px;
+height: 400px;
+
+background-image: url("../website/images/ticketcut.png");
+background-size: 100%;
+background-repeat: no-repeat;
+} */
 
 .textinfo {
   font-family: 'Jura', sans-serif;
   position: absolute;
-  top:400px;
-  left: 310px;
-  font-size: 18px;
-  width: 500px;
+  top:430px;
+  left: 270px;
+  font-size: 16px;
+  width: 730px;
   color: white;
+  text-align: justify;
+  text-justify: inter-word;
     /* background-color: red; */
 }
 

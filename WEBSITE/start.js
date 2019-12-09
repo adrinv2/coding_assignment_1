@@ -9,8 +9,8 @@ $(".container").on("mousedown", function(e) {
 
     // add statements that need to be performed between these lines
 
-      $(".container").css("background-color", "rgb(82, 148, 250)");
-      $(".container").css("border", "black");
+      $(".container").css("background-image", "url('../website/images/ticketcut.png')");
+      // $(".container").css("background-image", "none");
 //       new Gradientify({
 //     element: document.body,
 //     gradients: [
